@@ -2,6 +2,7 @@
     "name": "wolf/ads-service",
     "minimum-stability": "stable",
     "require": {
+        "ext-json": "*",
         "illuminate/database": "^7.26",
         "symfony/http-foundation": "^5.1",
         "symfony/http-kernel": "^5.1",

@@ -6,6 +6,7 @@ namespace Tests\Unit;
 
 use App\Controllers\MainController;
 use Core\App;
+use Exception;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
@@ -51,6 +52,7 @@ class ControllerTest extends TestCase
      * @param $params
      * @param $expected
      * @dataProvider validateErrorProvider
+     * @throws
      */
     public function testValidateError($values, $params, $expected)
     {
@@ -62,7 +64,7 @@ class ControllerTest extends TestCase
         $controller = new MainController();
         try {
             $controller->validate($params);
-        } catch (\Exception $ex) {
+        } catch (Exception $ex) {
             $this->assertEquals($expected, json_decode($ex->getMessage(), true));
             throw $ex;
         }
