@@ -1,0 +1,5 @@
+/vendor
+/.idea
+.phpunit.result.cache
+_ide_helper.php
+.editorconfig

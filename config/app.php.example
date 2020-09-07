@@ -1,0 +1,22 @@
+<?php
+
+return [
+    'url' => 'http://localhost',
+    'paths' => [
+        'banner_path' => dirname(__DIR__) . '/public',
+        'migration_path' => dirname(__DIR__) . '/migrations',
+        ],
+    'database' => [
+        'default' => 'mysql',
+        'connections' => [
+            'mysql' => [
+                'driver' => 'mysql',
+                'host' => '127.0.0.1',
+                'port' => '3306',
+                'database' => 'ads',
+                'username' => 'root',
+                'password' => 'secret',
+            ],
+        ]
+    ],
+];
